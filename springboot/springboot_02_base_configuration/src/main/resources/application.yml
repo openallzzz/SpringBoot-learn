@@ -1,0 +1,9 @@
+# 配置文件的主流格式
+server:
+  port: 80
+
+datasource:
+  driver: xxx
+  url: xxx
+  username: aa
+  password: 123
