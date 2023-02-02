@@ -1,7 +1,16 @@
 #2.配置相关信息
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/ssm_db?serverTimezone=UTC
+#    username: root
+#    password: zhangyu
+#    type: com.alibaba.druid.pool.DruidDataSource
+
 spring:
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/ssm_db?serverTimezone=UTC
-    username: root
-    password: zhangyu
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/ssm_db?serverTimezone=UTC
+      username: root
+      password: zhangyu
