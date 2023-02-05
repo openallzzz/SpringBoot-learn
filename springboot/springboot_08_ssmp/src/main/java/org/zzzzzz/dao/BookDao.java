@@ -6,4 +6,5 @@ import org.zzzzzz.domain.Book;
 
 @Mapper
 public interface BookDao extends BaseMapper<Book> {
+//    Boolean update(Book book);
 }
