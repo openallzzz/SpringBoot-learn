@@ -1,7 +1,6 @@
 package org.zzzzzz.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import lombok.Lombok;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.zzzzzz.domain.Book;
@@ -9,7 +8,7 @@ import org.zzzzzz.service.IBookService;
 
 import java.util.List;
 
-@RestController
+//@RestController
 @RequestMapping("/books")
 public class BookController {
 
