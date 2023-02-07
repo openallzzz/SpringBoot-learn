@@ -8,6 +8,7 @@ import org.zzzzzz.controller.utils.R;
 import org.zzzzzz.domain.Book;
 import org.zzzzzz.service.IBookService;
 
+import java.io.IOException;
 import java.util.List;
 
 @RestController
@@ -23,7 +24,10 @@ public class BookController2 {
     }
 
     @PostMapping
-    public R save(@RequestBody Book book) {
+    public R save(@RequestBody Book book) throws IOException {
+        if(book.getName().equals("123")) {
+            throw new IOException();
+        }
         return new R(bookService.save(book));
     }
 
