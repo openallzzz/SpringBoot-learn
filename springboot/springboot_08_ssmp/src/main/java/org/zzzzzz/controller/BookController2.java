@@ -48,7 +48,13 @@ public class BookController2 {
 
     @GetMapping("/{currentPage}/{pageSize}")
     public R getPage(@PathVariable int currentPage, @PathVariable int pageSize) {
-        return new R(true, bookService.getPage(currentPage, pageSize));
+        IPage<Book> page = bookService.getPage(currentPage, pageSize);
+
+        if(currentPage > page.getPages()) {
+            page = bookService.getPage((int)page.getPages(), pageSize);
+        }
+
+        return new R(true, page);
     }
 
 }
